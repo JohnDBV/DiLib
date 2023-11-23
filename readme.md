@@ -1,4 +1,4 @@
-Di Library v0.1.0
+Di Library v0.2.0
 
 General purpose library for speeding up the development process. Inspired by both the C++ standard library and the Qt framework.
 Compile using the C++ 20 standard, or refactor the code at your own cost.
@@ -25,6 +25,8 @@ Namespaces :
 * Existing namespaces list (in this version): 
   - di
   - di::internal
+  - di::file
+  - di::internal::file ( not needed )
 
 User-defined classes : 
 
@@ -44,3 +46,4 @@ Source Files :
 
 * No special constraints
 
+Enjoy !

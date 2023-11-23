@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Di">
+      <UniqueIdentifier>{6fb03e9b-a76d-47b2-b5fd-009173f247ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Di\impl">
+      <UniqueIdentifier>{d38da459-157e-40d8-888b-b306c3353a2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Di\internal">
+      <UniqueIdentifier>{5c03a613-dde7-4f31-b245-9d619f4b6649}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Di\internal\impl">
+      <UniqueIdentifier>{48a24bf1-7ba3-472f-8125-9dec6114f9f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Di\test">
+      <UniqueIdentifier>{9443b1c3-2508-4e4d-8dd4-cc7ff5be7b01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Di\test\impl">
+      <UniqueIdentifier>{418e3b9b-c39c-4c10-a30a-d491b013da31}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Di.h">
+      <Filter>Di</Filter>
+    </ClInclude>
+    <ClInclude Include="DiInternal.h">
+      <Filter>Di\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="DiTestClass.h">
+      <Filter>Di\test</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DiInternal.cpp">
+      <Filter>Di\internal\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="DiTestClass.cpp">
+      <Filter>Di\test\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="Di.cpp">
+      <Filter>Di\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.md" />
+  </ItemGroup>
+</Project>

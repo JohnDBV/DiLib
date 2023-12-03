@@ -31,6 +31,8 @@ Namespaces :
 User-defined classes : 
 
 * MUST use the RAII idiom
+* Interfaces must be prefixed with a capital 'i' ('I')
+* Abstract classes must NOT use the previous convention
 
 Header files :
 

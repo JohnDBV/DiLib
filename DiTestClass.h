@@ -17,12 +17,13 @@ namespace di
 		//Everything is explicitly deleted in the 'TestClass', you can copy it and implement what do you need (you may do your job faster without forgetting anything).
 		//In polymorphic base classes, you may need the virtual destructor(you have to delete the 'normal destructor' and start working).
 
-		//Attributes (tested on MSVC, C++ standard -> C20, they do NOT work). Still :
+		//Attributes (tested on MSVC, C++ standard -> C20, MAY NOT work). Still :
 		//For "void return-type methods" please ALWAYS use the [[NORETURN]] attribute.
 		//For non "void return-type methods" , in case you want to force the user to use the return value , please ALWAYS use [[NODISCARD]].
 		//Extra 1: Prefer std::string_view over std::string when you need a read-only string, especially for function parameters.
 		//Extra 2 (but bad practice) : If you don't want to initialize some data members please ALWAYS use [[MAYBE_UNUSED]].
 		//Example : If we have a struct, and we want to fill it with some bytes of data(using memcpy or std::copy), we should ALWAYS use the previous attribute
+		//Extra 3: Try using the 'rule of five' as it is. Try the "zero trust" ideology and implement constructors and "operator=" only WHEN NEEDED 
 
 		class DiTestClass
 		{

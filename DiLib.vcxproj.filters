@@ -31,6 +31,18 @@
     <Filter Include="Di\test\impl">
       <UniqueIdentifier>{418e3b9b-c39c-4c10-a30a-d491b013da31}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Di\file">
+      <UniqueIdentifier>{2ee772ba-6ec3-4cce-a336-8fb2a94c10ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Di\file\impl">
+      <UniqueIdentifier>{dd888cd3-6c58-4b47-abde-115f90043e69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Di\file\internal">
+      <UniqueIdentifier>{72a1f200-5fac-4215-91be-04e3fa6cfca7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Di\file\internal\impl">
+      <UniqueIdentifier>{61e64d64-2294-4b15-b107-cbf3918d7690}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Di.h">
@@ -41,6 +53,21 @@
     </ClInclude>
     <ClInclude Include="DiTestClass.h">
       <Filter>Di\test</Filter>
+    </ClInclude>
+    <ClInclude Include="DiFileInfo.h">
+      <Filter>Di\file</Filter>
+    </ClInclude>
+    <ClInclude Include="DiFile.h">
+      <Filter>Di\file</Filter>
+    </ClInclude>
+    <ClInclude Include="DiFileInternal.h">
+      <Filter>Di\file\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="DiTextFile.h">
+      <Filter>Di\file</Filter>
+    </ClInclude>
+    <ClInclude Include="DiBinaryFile.h">
+      <Filter>Di\file</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -55,6 +82,21 @@
     </ClCompile>
     <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiFileInfo.cpp">
+      <Filter>Di\file\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="DiFile.cpp">
+      <Filter>Di\file\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="DiFileInternal.cpp">
+      <Filter>Di\file\internal\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="DiTextFile.cpp">
+      <Filter>Di\file\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="DiBinaryFile.cpp">
+      <Filter>Di\file\impl</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -139,6 +139,7 @@
   <ItemGroup>
     <ClInclude Include="Di.h" />
     <ClInclude Include="DiBinaryFile.h" />
+    <ClInclude Include="DiBmpImage.h" />
     <ClInclude Include="DiFileInfo.h" />
     <ClInclude Include="DiFileInternal.h" />
     <ClInclude Include="DiImageInternal.h" />
@@ -152,6 +153,7 @@
   <ItemGroup>
     <ClCompile Include="Di.cpp" />
     <ClCompile Include="DiBinaryFile.cpp" />
+    <ClCompile Include="DiBmpImage.cpp" />
     <ClCompile Include="DiFileInfo.cpp" />
     <ClCompile Include="DiFileInternal.cpp" />
     <ClCompile Include="DiImageInternal.cpp" />

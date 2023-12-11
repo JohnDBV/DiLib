@@ -34,8 +34,6 @@ bool di::image::internal::DiImageInternal::isPngSignatureMatch(uint64_t bytesSiz
     if (bytesSize < PngSignatureSize)
         return false;
 
-    int8_t result = my_memcmp<uint8_t>(PngSignature, bytes, PngSignatureSize);
-
     return 0 == my_memcmp<uint8_t>(PngSignature, bytes, PngSignatureSize);
 }
 

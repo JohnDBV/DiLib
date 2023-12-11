@@ -10,7 +10,10 @@ namespace di
 		namespace internal
 		{
 			constexpr uint8_t PngSignature[8] = { 137, 80, 78, 71, 13, 10, 26, 10 };
+			constexpr uint8_t PngSignatureSize = 8;
+
 			constexpr uint8_t BmpSignature[2] = { 'B', 'M' };
+			constexpr uint8_t BmpSignatureSize = 2;
 
 			class DiImageInternal
 			{

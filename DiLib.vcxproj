@@ -147,6 +147,7 @@
     <ClInclude Include="DiFile.h" />
     <ClInclude Include="DiTextFile.h" />
     <ClInclude Include="IGenericImage.h" />
+    <ClInclude Include="DiPngImage.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Di.cpp" />
@@ -159,6 +160,7 @@
     <ClCompile Include="DiFile.cpp" />
     <ClCompile Include="DiTextFile.cpp" />
     <ClCompile Include="IGenericImage.cpp" />
+    <ClCompile Include="DiPngImage.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>

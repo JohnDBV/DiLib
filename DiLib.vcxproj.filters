@@ -87,6 +87,9 @@
     <ClInclude Include="DiImageInternal.h">
       <Filter>Di\image\internal</Filter>
     </ClInclude>
+    <ClInclude Include="DiPngImage.h">
+      <Filter>Di\image</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DiInternal.cpp">
@@ -121,6 +124,9 @@
     </ClCompile>
     <ClCompile Include="DiImageInternal.cpp">
       <Filter>Di\image\internal\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="DiPngImage.cpp">
+      <Filter>Di\image\impl</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

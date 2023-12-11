@@ -3,6 +3,7 @@
 
 #include <utility>
 #include <memory>
+#include "DiFile.h"
 
 namespace di
 {
@@ -12,7 +13,8 @@ namespace di
 		class IGenericImage
 		{
 		public:
-			IGenericImage() = delete;
+			IGenericImage();
+			IGenericImage(DiFileData& fileBytes) : m_imageBytes{ fileBytes } {}
 
 			//Rule of five : 
 			IGenericImage(const IGenericImage& other) = delete;
@@ -22,7 +24,8 @@ namespace di
 			virtual ~IGenericImage();/* No Resources To Destruct, still it's good practice to have this virtual destructor*/
 			
 		protected :
-			virtual std::pair<uint64_t,std::unique_ptr<uint8_t[]>> getImageBytes() = 0;
+			virtual di::file::internal::DiFileData& getImageBytes() = 0;
+			DiFileData m_imageBytes;
 			unsigned int bitsPerPixel = 0;//Other possible values : 1 (monochrome image using black/white) or 4(16 colors), 8(256 colors), 16(65536 colors), 24(16M colors)
 		};
 	}

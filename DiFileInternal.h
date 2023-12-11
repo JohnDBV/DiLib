@@ -11,7 +11,7 @@ namespace di
 	{
 		namespace internal
 		{
-			using BinaryDataPair = std::pair<int, std::unique_ptr<uint8_t []>>;
+			using BinaryDataPair = std::pair<uint64_t, std::unique_ptr<uint8_t[]>>;
 
 			//Generic data storage class for file data
 			struct DiFileData

@@ -141,20 +141,24 @@
     <ClInclude Include="DiBinaryFile.h" />
     <ClInclude Include="DiFileInfo.h" />
     <ClInclude Include="DiFileInternal.h" />
+    <ClInclude Include="DiImageInternal.h" />
     <ClInclude Include="DiInternal.h" />
     <ClInclude Include="DiTestClass.h" />
     <ClInclude Include="DiFile.h" />
     <ClInclude Include="DiTextFile.h" />
+    <ClInclude Include="IGenericImage.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Di.cpp" />
     <ClCompile Include="DiBinaryFile.cpp" />
     <ClCompile Include="DiFileInfo.cpp" />
     <ClCompile Include="DiFileInternal.cpp" />
+    <ClCompile Include="DiImageInternal.cpp" />
     <ClCompile Include="DiInternal.cpp" />
     <ClCompile Include="DiTestClass.cpp" />
     <ClCompile Include="DiFile.cpp" />
     <ClCompile Include="DiTextFile.cpp" />
+    <ClCompile Include="IGenericImage.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>

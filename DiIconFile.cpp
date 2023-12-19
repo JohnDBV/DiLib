@@ -238,7 +238,7 @@ void di::image::DiIconFile::extractData()
 				std::shared_ptr<di::image::DiBmpImage> toAdd = std::make_shared<di::image::DiBmpImage>(realBitmapBytes);
 
 				//set some dummy file name with the "bmp" extension
-				toAdd->getFileInfo().setFileNameOnlyTo("C:\\users\\dogar\\pictures\\image" + std::to_string(i + 1));
+				toAdd->getFileInfo().setFileNameOnlyTo("image" + std::to_string(i + 1));
 				toAdd->getFileInfo().setFileExtensionTo("bmp");
 
 				//finally, push the object on the vector
@@ -250,7 +250,7 @@ void di::image::DiIconFile::extractData()
 				std::shared_ptr<di::image::DiPngImage> toAdd = std::make_shared<di::image::DiPngImage>(imageData);
 
 				//set some dummy file name with the "bmp" extension
-				toAdd->getFileInfo().setFileNameOnlyTo("C:\\users\\dogar\\pictures\\image" + std::to_string(i + 1));
+				toAdd->getFileInfo().setFileNameOnlyTo("image" + std::to_string(i + 1));
 				toAdd->getFileInfo().setFileExtensionTo("png");
 				bool result = toAdd->isValidPngImage();
 				//finally, push the object on the vector

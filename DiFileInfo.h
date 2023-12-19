@@ -23,7 +23,7 @@ namespace di
 			explicit DiFileInfo(std::string_view filePath) : m_filePath(filePath), m_path(filePath) {};
 			
 			//Rule of five : 
-			DiFileInfo(const DiFileInfo& other) = delete;
+			DiFileInfo(const DiFileInfo& other);
 			DiFileInfo& operator = (const DiFileInfo& other) = delete;
 			DiFileInfo(const DiFileInfo&& other) = delete;
 			DiFileInfo& operator = (const DiFileInfo&& other) = delete;

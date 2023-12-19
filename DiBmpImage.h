@@ -17,7 +17,7 @@ namespace di
 			DiBmpImage() = delete;
 
 			DiBmpImage(std::string fileName) : DiBinaryFile(fileName), IGenericImage() { getFileContent(); }
-			DiBmpImage(DiFileData binaryData) : DiBinaryFile(""), IGenericImage(binaryData) { m_fileData = binaryData; };
+			DiBmpImage(DiFileData binaryData) : DiBinaryFile(""), IGenericImage(binaryData) { m_fileData = binaryData; }
 
 
 			//Rule of five : 
@@ -29,11 +29,16 @@ namespace di
 
 			// Inherited via IGenericImage
 			virtual DiFileData& getImageBytes() final;
+			virtual uint32_t getWidth() final;
+			virtual uint32_t getHeight() final;
+			virtual std::string_view getImageExtension() final;
 
 			bool isValidBmpImage();
 
 		private:
+			bool hasCompression();
 
+			const char* m_fileExt = "bmp";
 		};
 
 	}

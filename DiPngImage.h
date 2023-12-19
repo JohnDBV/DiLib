@@ -16,8 +16,8 @@ namespace di
 		public:
 			DiPngImage() = delete;
 
-			DiPngImage(std::string fileName) : DiBinaryFile(fileName), IGenericImage() { getFileContent(); }
-			DiPngImage(DiFileData binaryData) : DiBinaryFile(""), IGenericImage(binaryData) { m_fileData = binaryData; };
+			DiPngImage(std::string fileName) : DiBinaryFile(fileName), IGenericImage() { getFileContent();}
+			DiPngImage(DiFileData binaryData) : DiBinaryFile(""), IGenericImage(binaryData) { m_fileData = binaryData;};
 
 
 			//Rule of five : 
@@ -29,10 +29,15 @@ namespace di
 
 			// Inherited via IGenericImage
 			virtual DiFileData& getImageBytes() final;
+			virtual uint32_t getWidth() final;
+			virtual uint32_t getHeight() final;
+			virtual std::string_view getImageExtension() final;
 
 			bool isValidPngImage();
 
 		private :
+
+			const char* m_fileExt = "png";
 		};
 
 	}

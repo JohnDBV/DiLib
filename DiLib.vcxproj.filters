@@ -93,6 +93,9 @@
     <ClInclude Include="DiBmpImage.h">
       <Filter>Di\image</Filter>
     </ClInclude>
+    <ClInclude Include="DiIconFile.h">
+      <Filter>Di\image</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DiInternal.cpp">
@@ -134,8 +137,12 @@
     <ClCompile Include="DiBmpImage.cpp">
       <Filter>Di\image\impl</Filter>
     </ClCompile>
+    <ClCompile Include="DiIconFile.cpp">
+      <Filter>Di\image\impl</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.md" />
+    <None Include="coding_conventions.md" />
   </ItemGroup>
 </Project>

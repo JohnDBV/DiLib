@@ -16,7 +16,7 @@ namespace di
 		{
 		public:
 			DiFile() = delete;
-			DiFile(std::string filePath, std::ios::openmode openMode= std::ios::in | std::ios::out) :
+			DiFile(std::string filePath, std::ios::openmode openMode= std::ios::in | std::ios::out|std::ios::binary) :
 				m_fileInfo(filePath){
 				m_fileData.openMode = openMode;
 			}
@@ -29,7 +29,7 @@ namespace di
 			virtual ~DiFile();
 
 		protected :
-			[[nodiscard]] virtual DiFileData getFileContent(void) = 0;
+			virtual DiFileData getFileContent(void) = 0;
 			[[noreturn]] virtual void setFileContent(DiFileData & data) = 0;
 
 			DiFileInfo m_fileInfo;

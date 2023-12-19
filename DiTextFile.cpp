@@ -35,11 +35,11 @@ DiFileData di::file::DiTextFile::getFileContent()
 
 void di::file::DiTextFile::setFileContent(DiFileData& data)
 {
-    if (m_fileData.isBinaryModeOpened() || !m_fileData.canWrite())
+    if (data.isBinaryModeOpened() || !data.canWrite())
         return;//get out ! 
 
     //Get rid of the std::ios::in mode, as it may leave artifacts inside the file
-    std::fstream fs(m_fileInfo.getFilePath(), m_fileData.openMode ^ std::ios::in);
+    std::fstream fs(m_fileInfo.getFilePath(), data.openMode ^ std::ios::in);
 
     if (fs.good())
     {

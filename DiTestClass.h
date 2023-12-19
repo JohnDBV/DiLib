@@ -19,11 +19,11 @@ namespace di
 
 		//Attributes (tested on MSVC, C++ standard -> C20, MAY NOT work). Still :
 		//For "void return-type methods" please ALWAYS use the [[NORETURN]] attribute.
-		//For non "void return-type methods" , in case you want to force the user to use the return value , please ALWAYS use [[NODISCARD]].
+		//In case you want to force the user use the return value , please ALWAYS use [[NODISCARD]] (VERY IMPORTANT if we use 'std::move(some_unique_pointer)' to transfer ownership)
 		//Extra 1: Prefer std::string_view over std::string when you need a read-only string, especially for function parameters.
-		//Extra 2 (but bad practice) : If you don't want to initialize some data members please ALWAYS use [[MAYBE_UNUSED]].
+		//Extra 2 (but maybe bad practice) : If you don't want to initialize some data members please ALWAYS use [[MAYBE_UNUSED]].
 		//Example : If we have a struct, and we want to fill it with some bytes of data(using memcpy or std::copy), we should ALWAYS use the previous attribute
-		//Extra 3: Try using the 'rule of five' as it is. Try the "zero trust" ideology and implement constructors and "operator=" only WHEN NEEDED 
+		//Extra 3: Try using the 'rule of five' as it is. Try the "zero trust" ideology and implement constructors and "operator=" ONLY WHEN NEEDED 
 
 		class DiTestClass
 		{

@@ -2,6 +2,12 @@
 #include "DiInternal.h"
 #include <filesystem>
 
+di::file::DiFileInfo::DiFileInfo(const DiFileInfo& other)
+{
+    m_filePath = other.m_filePath;
+    m_path = other.m_path;
+}
+
 di::file::DiFileInfo::~DiFileInfo()
 {
     //nothing to delete

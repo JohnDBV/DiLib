@@ -142,6 +142,7 @@
     <ClInclude Include="DiBmpImage.h" />
     <ClInclude Include="DiFileInfo.h" />
     <ClInclude Include="DiFileInternal.h" />
+    <ClInclude Include="DiIconFile.h" />
     <ClInclude Include="DiImageInternal.h" />
     <ClInclude Include="DiInternal.h" />
     <ClInclude Include="DiTestClass.h" />
@@ -156,6 +157,7 @@
     <ClCompile Include="DiBmpImage.cpp" />
     <ClCompile Include="DiFileInfo.cpp" />
     <ClCompile Include="DiFileInternal.cpp" />
+    <ClCompile Include="DiIconFile.cpp" />
     <ClCompile Include="DiImageInternal.cpp" />
     <ClCompile Include="DiInternal.cpp" />
     <ClCompile Include="DiTestClass.cpp" />
@@ -166,6 +168,7 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="coding_conventions.md" />
     <None Include="readme.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

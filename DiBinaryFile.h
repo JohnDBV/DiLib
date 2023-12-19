@@ -27,11 +27,11 @@ namespace di
 			DiFileInfo& getFileInfo();
 
 			// Inherited via DiFile
-			[[nodiscard]] virtual DiFileData getFileContent() final;
+			virtual DiFileData getFileContent() final;
 			[[noreturn]] virtual void setFileContent(DiFileData& data) final;
 
 			//This overload gets the file content using a custom open mode. One-time only
-			[[nodiscard]] DiFileData getFileContent(std::ios::openmode newOpenMode);
+			DiFileData getFileContent(std::ios::openmode newOpenMode);
 			//This overload writes the file content using a custom open mode. One-time only
 			[[noreturn]] void setFileContent(DiFileData& data, std::ios::openmode newOpenMode);
 		};

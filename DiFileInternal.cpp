@@ -2,7 +2,7 @@
 
 di::file::internal::DiFileData::DiFileData()
 {
-	openMode = std::ios::in | std::ios::out;
+	openMode = std::ios::in | std::ios::out | std::ios::binary;
 	binaryData = std::make_pair<int, std::unique_ptr<uint8_t[]>>(0, std::make_unique <uint8_t[]>(0));
 }
 

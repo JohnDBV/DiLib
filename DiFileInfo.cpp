@@ -31,7 +31,7 @@ std::string di::file::DiFileInfo::getFileNameWithExtension()
     size_t pos = m_filePath.find_last_of(di::internal::slash);
 
     if (std::string::npos == pos)
-        return std::string();
+        return std::string(m_filePath);
 
     return std::string(m_filePath.substr(pos + 1));
 }

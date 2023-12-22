@@ -1,4 +1,4 @@
-Di Library v1.0.1
+Di Library v1.0.2
 
 General purpose library for speeding up the development process. Inspired by both the C++ standard library and the Qt framework.
 Compile using the C++ 20 standard, or refactor the code at your own cost.

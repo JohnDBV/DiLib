@@ -165,7 +165,6 @@
     <ClCompile Include="DiTextFile.cpp" />
     <ClCompile Include="IGenericImage.cpp" />
     <ClCompile Include="DiPngImage.cpp" />
-    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="coding_conventions.md" />

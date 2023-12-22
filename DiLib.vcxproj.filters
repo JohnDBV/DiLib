@@ -107,9 +107,6 @@
     <ClCompile Include="Di.cpp">
       <Filter>Di\impl</Filter>
     </ClCompile>
-    <ClCompile Include="Source.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DiFileInfo.cpp">
       <Filter>Di\file\impl</Filter>
     </ClCompile>

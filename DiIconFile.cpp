@@ -9,22 +9,29 @@ di::image::DiIconFile::~DiIconFile()
 {
 }
 
-uint32_t di::image::DiIconFile::getOffsetForNewImage()
+uint32_t di::image::DiIconFile::getOffsetForImageWithIndex(uint32_t index)
 {
 	//Add the amount of bytes of the icon file directory
 	uint32_t total = sizeof(di::image::internal::IconDir);
 
-	//We have old IconDirEntry headers, and a new one which will be created after this method call. Add all 'oldCount' + 1 headers
-	total += (m_iconDir.count + 1) * sizeof(IconDirEntry);
+	//We must add all headers size
+	total += m_iconDirEntries.size() * sizeof(IconDirEntry);
 
-	//For every existing IconDirEntry header item, we have some file data size. Add it !
-	for (const auto& item : m_iconDirEntries)
+	//For every previous IconDirEntry header item, we have some file data size. Add it !
+	for (int i=0; i < index ; ++i)
 	{
-		total += item.size;
+		total += m_iconDirEntries[i].size;
 	}
 
 	//After the last file block (at the end of the old headers array) and with our current new header also added, we are ok. So :
 	return total;
+}
+
+void di::image::DiIconFile::recalculateOffsets()
+{
+	for (int i = 0; i < m_iconDirEntries.size(); ++i)
+		m_iconDirEntries[i].offset = getOffsetForImageWithIndex(i);
+
 }
 
 uint64_t di::image::DiIconFile::getTotalBytesSize()
@@ -70,8 +77,7 @@ void di::image::DiIconFile::addPicture(std::string filePath)
 	IconDirEntry entry;
 	entry.planes = 1;
 	entry.size = info.getFileSize();
-	entry.offset = getOffsetForNewImage();
-	//all that's left is witdt and height
+	entry.offset = 0;//recalculate offsets at the end
 
 	if (info.getFileExtension() == "bmp")
 	{
@@ -99,6 +105,8 @@ void di::image::DiIconFile::addPicture(std::string filePath)
 				m_images.push_back(toAdd);
 			}
 		}
+
+	recalculateOffsets();
 }
 
 void di::image::DiIconFile::extractImagesToCurrentFolder()

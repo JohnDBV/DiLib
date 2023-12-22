@@ -39,7 +39,8 @@ namespace di
 		private:
 
 			[[noreturn]] void extractData();
-			uint32_t getOffsetForNewImage();
+			uint32_t getOffsetForImageWithIndex(uint32_t index);
+			[[noreturn]] void recalculateOffsets();
 			uint64_t getTotalBytesSize();
 
 			IconDir m_iconDir;

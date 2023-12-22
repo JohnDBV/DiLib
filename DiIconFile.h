@@ -34,6 +34,7 @@ namespace di
 			[[noreturn]] void exportImagesToIconFile();
 			[[noreturn]] void extractImagesToCurrentFolder();
 			[[noreturn]] void removeLastImage();
+			uint32_t getImagesCount();
 
 		private:
 
@@ -48,10 +49,5 @@ namespace di
 		};
 	}
 }
-class DiIconFile
-{
-
-
-};
 
 #endif

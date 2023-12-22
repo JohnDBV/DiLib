@@ -57,6 +57,11 @@ void di::image::DiIconFile::removeLastImage()
 	}
 }
 
+uint32_t di::image::DiIconFile::getImagesCount()
+{
+	return m_images.size();
+}
+
 void di::image::DiIconFile::addPicture(std::string filePath)
 {
 	di::file::DiFileInfo info(filePath);
